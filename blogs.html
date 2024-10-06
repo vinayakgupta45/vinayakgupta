@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+ <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.box{
+    background-color: blanchedalmond;
+    width: 330px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+.box input{
+    width: 240px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    gap: 0.625rem;
+
+}
+.logo-icon{
+    height: 3rem;
+    width: 3rem;
+
+}
+
+.logo-text{
+    font-size: 2rem;
+}
+
+.nav{
+    display: none;
+      gap: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link{
+    color: #718096;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transform: color 0.1s;
+    gap: 5rem;
+     display: flex;
+    flex-direction: row; 
+    justify-content: space-between; }
+
+
+ .nav-link:hover{
+    color:blue;
+} 
+
+ .contact-button{
+    
+    border: none;
+    border-radius: 0.375rem;
+    background-color: blue;
+    color: white;
+    transform: all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1rem;
+}
+
+@media screen and (min-width:788px){
+    .contact-button{
+        display: block;
+    }
+}
+.contact-button:hover{
+    background-color: #5254f8;
+
+}
+.menu-button{
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: white;
+    padding: 0.5rem 0.9rem;
+}
+@media screen and (max-width:788px){
+    .menu-button{
+        display: block;
+    }
+}
+.menu-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+}  
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-card h2 {
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+.blog-card p {
+    padding: 0 15px 20px 15px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 20px;
+    }
+    .blog-card h2 {
+        font-size: 1.2rem;
+    }
+    .blog-card p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 15px;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 15px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .card h3 {
+    font-size: 0.9rem;
+  }
+
+  .card p {
+    font-size: 0.75rem;
+  }
+}
+ </style>
+</head>
+<body>
+    <div class="header">
+        <header class="header-content" >
+             <a href="#logo" class="logo">
+                <img src="images/logo.webp" alt="logo" class="logo-icon">
+                <span class="logo-text">Travelgoo</span>
+             </a>
+             <div class="box">
+                <input type="text"
+                placeholder="search">
+                <i class="fa-solid"></i>
+
+             </div>
+             <nav class="nav">
+                <a href="grouptrip.html" class="nav-link">DESTINATION</a>
+                <a href="packages.html"  class="nav-link">PACKAGES</a>
+                <a href="blogs.html"  class="nav-link">BLOGS</a>
+                <a href="#none"  class="nav-link">ABOUT US</a>
+
+             </nav>
+             <a href="#contact" class="contact-button">Contact Us</a>
+             <button class="menu-button">
+                <img src="Hamburger.svg" alt="menuButton" class="menu-icon">
+
+              </button>
+        </header>
+
+    </div>
+        <hr>
+
+    <header>
+        <h1>Views Shared by People</h1>
+    </header>
+
+    <section class="blog-container">
+        <div class="blog-card">
+            <img src="images/jk.jpg" alt="Exploring Leh Ladakh on Two Wheels">
+            <h2>Exploring Leh Ladakh on Two Wheels</h2>
+            <p>Contributed by Mr Rohit Sen. Ladakh, the land of high passes, is known for its breathtaking landscapes...</p>
+        </div>
+        <div class="blog-card">
+            <img src="images/ladakh.jpg" alt="Cultural Immersion in India">
+            <h2>Cultural Immersion in India: Beyond the Taj Mahal</h2>
+            <p>7 wonders in India, and our Taj Mahal gets global recognition, but there's more to explore...</p>
+        </div>
+        <div class="blog-card">
+            <img src="images/friends.jpg" alt="Why Group Tours Are the Best Way While Traveling">
+            <h2>Why Group Tours are the Best Way While Traveling</h2>
+            <p>Group tours offer security, enjoyment, and a way to share memorable experiences...</p>
+        </div>
+        <div class="blog-card">
+            <img src="images/rope.jpg" alt="Iconic Road Trips in India">
+            <h2>Iconic Road Trips in India: Routes You Must Experience</h2>
+            <p>Road trips can ignite a sense of adventure. Whether you're young or old, they're the ultimate journey...</p>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="card">
+          <img src="images/gujarat.jpg" alt="Kedarnath">
+          <h3>Explore the Best of Kedarnath: A Comprehensive Guide</h3>
+          <p>Garhwal Himalayas of Uttarakhand main sthith, Kedarnath bhakto ke liye ek bohot hi pavitra aur paavan dhaam ha...</p>
+        </div>
+        
+        <div class="card">
+          <img src="images/delhi.jpg" alt="Traveling">
+          <h3>Why Traveling is Better Than Therapy?</h3>
+          <p>In today’s fast-paced, high-stress world, maintaining mental well-being...</p>
+        </div>
+        
+        <div class="card">
+          <img src="images/bhutan.jpg" alt="Himachal">
+          <h3>Travel Cheaper Than A Birthday Party</h3>
+          <p>Himachal Trip In Budget? What if I tell you ki Birthday party celebrate karna chhod ke trip plan karlo?? Well...</p>
+        </div>
+    
+        <div class="card">
+          <img src="images/arunanchal.jpg" alt="Honeymoon">
+          <h3>Top 5 International Honeymoon Destinations: Best Places</h3>
+          <p> Newly married ?? May god bless you with a romantic trip!!...</p>
+        </div>
+      </div>
+
+    
+</body>
+</html>
